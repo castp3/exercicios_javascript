@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio04</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        input {
+            font: normal 18pt arial;
+        }
+        #res{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div style="align-items: center;">
+        <h1 style="text-align: center;">Gasto de Combustivel</h1>
+       Valor Combustivel <input type="number" name="txtn1" id="txtn1">
+        Quilômetros Rodados<input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Gasto Total" onclick="gasto()"> 
+        <div id="res">
+            <p>Total R$</p>
+        </div>
+    </div>
+
+    <script>
+        function gasto(){
+            var tn1 = document.getElementById('txtn1')
+            var n1 = Number(tn1.value)
+            var tn2 = document.getElementById('txtn2')
+            var n2 = Number(tn2.value)
+            var gasto = (n2 / 8 ) * n1
+            res.innerText = `O gasto total é R$ ${gasto.toFixed(2)}`
+        }
+        
+    </script>
+</body>
+</html>

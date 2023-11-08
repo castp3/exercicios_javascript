@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio06</title>
+    <style>
+        body{
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Peso Ideal</h1>
+    <script>
+        var nome = prompt("Qual seu nome?");
+        alert("Olá bom dia "+nome);
+        var sexo = (prompt("Qual o seu sexo?(macho/femea) ")).toUpperCase();
+        var altura  = parseFloat(prompt("Qual sua altura? "))
+        if(sexo == "MACHO"){
+        var pesoIdeal = (72.7*altura) - 58
+        alert("Seu peso ideal é "+pesoIdeal.toFixed(2))
+        }
+        else if (sexo == "FEMEA") {
+            var pesoIdeal = (62.1 * altura ) - 44.7
+            alert("Seu peso ideal é "+pesoIdeal.toFixed(2))
+        }
+
+    </script>
+</body>
+</html>

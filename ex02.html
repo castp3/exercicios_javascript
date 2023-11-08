@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio02</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        input {
+            font: normal 18pt arial;
+        }
+        #res{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div style="align-items: center;">
+        <h1 style="text-align: center;">Conversão de Temperatura</h1>
+        <input type="number" name="txtn1" id="txtn1">
+        <input type="button" value="Converter para Celsius" onclick="Cels()"> 
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Converter para Fahrenheit" onclick="Fah()"> 
+        <div id="res">
+            <p>Resultado</p>
+        </div>
+    </div>
+
+    <script>
+        function Cels(){
+            var tn1 = document.getElementById('txtn1')
+            var n1 = Number(tn1.value)
+            var celsius =  (n1 - 32) / 1.8
+            res.innerText = `${n1}°F é ${celsius.toFixed(2)}°C`
+        }
+        function Fah(){
+            var tn2 = document.getElementById('txtn2')
+            var n2 = Number(tn2.value)
+            var fah = n2 * 1.8 + 32
+            res.innerText = `${n2}°C é ${fah.toFixed(2)}°F`
+        }
+        
+    </script>
+</body>
+</html>
